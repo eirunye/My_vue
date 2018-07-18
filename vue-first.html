@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue的简单实例</title>
+    <script src="js/vue.js"></script>
+    <script>
+        window.onload = function () {
+            new Vue({
+                el: "#box",//指定的跟元素Id
+                data: {//填充的数据
+                    msg: "hello vue!",//key必须对应html里面的标识msg
+                }
+            })
+        }
+    </script>
+</head>
+<body>
+<div id="box">
+
+    {{msg}}
+
+</div>
+</body>
+</html>

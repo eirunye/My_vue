@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>computed计算属性</title>
+    <script src="js/vue.js"></script>
+    <script>
+        window.onload = function () {
+            new Vue({
+                el: "#box",
+                data: {
+                    kilometers: 0,
+                    meter: 0
+                },
+                computed: {//计算属性
+
+                },
+                methods: {//方法
+
+                },
+                watch: {//属性监听器
+                    kilometers: function (value) {
+                        this.kilometers = value;
+                        this.meter = value * 1000;
+                    },
+                    meter: function (value) {
+
+                        this.kilometers = value / 1000;
+                        this.meter = value;
+                    }
+                }
+            })
+        }
+    </script>
+</head>
+<body>
+<div id="box">
+    <label for="from1">千米</label>
+    <input type="text" v-model="kilometers">
+    <label for="from2">米</label>
+    <input type="text" v-model="meter">
+</div>
+
+</body>
+</html>

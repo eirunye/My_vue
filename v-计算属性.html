@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>computed计算属性</title>
+    <script src="js/vue.js"></script>
+    <script>
+        window.onload = function () {
+            new Vue({
+                el: "#box",
+                data: {
+                    message: "hello"
+                },
+                computed: {//计算属性
+                    reversedMessage: function () {
+                        return this.message.toString().toUpperCase()
+                    }
+                },
+                methods: {//方法
+                    reversedMessage2: function () {
+                        return this.message.toUpperCase()
+                    }
+                }
+            })
+        }
+    </script>
+</head>
+<body>
+<div id="box">
+    <p>原始字符串: {{ message }}</p>
+    <p>计算后输出大写字符串: {{ reversedMessage }}</p>
+    <p>使用方法后输出大写字符串: {{ reversedMessage2() }}</p>
+</div>
+
+</body>
+</html>

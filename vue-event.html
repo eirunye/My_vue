@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue-事件</title>
+    <script src="js/vue.js"></script>
+    <script>
+        window.onload = function () {
+            new Vue({
+                el: '#box',
+                data: {
+                    list: ["a", 'b', 'c'],
+                    lists: ["a", 'b', 'c'],
+                },
+                methods: {//方法处理
+                    add: function () {
+                        this.list.push("aaa");
+                    },
+                    adds:function () {
+                        this.lists.push('bbbbb')
+                    }
+
+                }
+            })
+        }
+    </script>
+</head>
+<body>
+<div id="box">
+    <input type="button" value="点击" v-on:click="add()"><!--点击事件 方法==show-->
+    <input type="button" value="点击s" v-on:dblclick="adds()"><!--双击点击事件 方法==show-->
+
+    <ul>
+        <li v-for="value in list">
+            {{value}}
+        </li>
+    </ul>
+    <hr>
+    <ul>
+        <li v-for="value in lists">{{value}}</li>
+    </ul>
+
+</div>
+
+</body>
+</html>

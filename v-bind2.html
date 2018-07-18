@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v-bind属性</title>
+    <script src="js/vue.js"></script>
+    <script>
+        window.onload = function () {
+            new Vue({
+                el: "#box",
+                data: {
+                    a: true,
+                    b: false,
+                    json: {
+                        red: false,
+                        blue: true
+                    },
+                    c: {color: 'blue'},
+                    d: {background: 'red'},
+
+                    f:{
+                        color:'blue',
+                        backgroundColor:'gray'
+                    }
+                },
+                methods: {}
+            })
+        }
+    </script>
+    <style>
+        .red {
+            color: red;
+        }
+
+        .blue {
+            background: blue;
+        }
+    </style>
+</head>
+<body>
+
+<div id="box">
+    <!--class的几种显示方式-->
+    <strong :class="{red:true,blue:true}">okokoko</strong>
+    <strong :class="{red:a,blue:b}">okokoko</strong>
+    <strong :class="json">okokoko</strong>
+    <hr>
+    <!--Style几种显示方式-->
+    <strong :style="{color:'red'}"> 你好style</strong>
+    <strong :style="[c]"> 你好style</strong>
+    <strong :style="[c,d]"> 你好style</strong>
+    <strong :style="f"> 你好style</strong>
+</div>
+</body>
+</html>

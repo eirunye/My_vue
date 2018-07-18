@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v-组件</title>
+    <script src="js/vue.js"></script>
+    <script>
+        window.onload = function () {
+            var child = {
+                template: '<h1>自定义组件</h1>'
+            }
+
+            new Vue({
+                el: '#box',
+                components: {//将只在父模板可用
+                    'hello': child
+                }
+            })
+        }
+    </script>
+</head>
+<body>
+
+<div id="box">
+    <hello></hello>
+</div>
+
+</body>
+</html>

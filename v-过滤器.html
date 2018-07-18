@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v-bind属性</title>
+    <script src="js/vue.js"></script>
+    <script>
+        window.onload = function () {
+            new Vue({
+                el: "#box",
+                data: {},
+                methods: {}
+            })
+        }
+    </script>
+    <style>
+        .red {
+            color: red;
+        }
+
+        .blue {
+            background: blue;
+        }
+    </style>
+</head>
+<body>
+
+<div id="box">
+    {{'welcome'|uppercase}}
+    <br>
+    {{'WELCOME'|lowercase}}
+</div>
+</body>
+</html>

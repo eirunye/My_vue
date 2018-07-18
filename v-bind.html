@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v-bind属性</title>
+    <script src="js/vue.js"></script>
+    <script>
+        window.onload = function () {
+            new Vue({
+                el: "#box",
+                data: {
+                    url: "https://www.baidu.com/img/bd_logo1.png",
+                    t:"美丽的图",
+                    w:"200px",
+                }
+            })
+        }
+    </script>
+</head>
+<body>
+
+<div id="box">
+    <img v-bind:src="url" alt=""><!--v-bind是设置属性简写是 : -->
+    <img :src="url" :width="w" :title="t" alt="">
+</div>
+</body>
+</html>

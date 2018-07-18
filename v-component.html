@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v-组件</title>
+    <script src="js/vue.js"></script>
+    <script>
+        //1、自定义一个元素标签
+        //2、创建一个Vue.component('自定义元素',{template:''})
+        //3、创建new Vue({el:'',data:{}.....})
+        window.onload = function () {
+
+            Vue.component('hello', {
+                template: '<h1>自定义组件</h1>'
+            })
+            new Vue({
+                el: '#box'
+            })
+        }
+    </script>
+</head>
+<body>
+
+<div id="box">
+
+    <hello></hello>
+</div>
+
+</body>
+</html>

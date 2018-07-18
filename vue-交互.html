@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>get/post/jsonp请求</title>
+    <script src="js/vue.js"></script>
+    <script src="js/vue-resource.js"></script>
+    <script>
+        //get请求方式
+        window.onload = function () {
+            new Vue({
+                el: '#box',
+                data: {},
+                methods: {
+                    get: function () {
+                        //this.$http.get("url地址")
+                        this.$http.get('a.txt').then(function (result) {
+                            alert(result.data);
+                        }, function (fail) {
+                            alert(fail.status)
+                        });
+                    }
+                }
+            })
+        }
+    </script>
+</head>
+<body>
+
+<div id="box">
+    <input type="button" value="请求" v-on:click="get()">
+</div>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v-组件-props</title>
+    <script src="js/vue.js"></script>
+    <script>
+        //prop 是父组件用来传递数据的一个自定义属性。
+        //父组件的数据需要通过 props 把数据传给子组件，子组件需要显式地用 props 选项声明 "prop"：
+        window.onload = function () {
+            Vue.component('hello', {
+                //声明props
+                props: ['msg'],
+                template: '<span>{{msg}}</span>'
+            });
+            new Vue({
+                el: '#box',
+            })
+        }
+    </script>
+</head>
+<body>
+
+<div id="box">
+    <hello msg="hello"></hello>
+</div>
+
+</body>
+</html>

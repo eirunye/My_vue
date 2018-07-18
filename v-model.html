@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>V-model实例</title>
+</head>
+<script src="js/vue.js"></script>
+<script>
+    //v-model:数据双向绑定
+    window.onload = function () {
+        new Vue({
+            el: "#box",
+            data: {
+                msg:'abc'
+            }
+        })
+    }
+
+</script>
+<body>
+<div id="box">
+
+    <input type="text" v-model="msg"><!--数据双向绑定-->
+    <input type="text" v-model="msg"><!--数据双向绑定-->
+    <br>
+    {{msg}}
+</div>
+
+</body>
+</html>

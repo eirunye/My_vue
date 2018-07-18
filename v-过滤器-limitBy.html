@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>过滤器</title>
+    <script src="js/vue.js"></script>
+    <script>
+        //filterBy过滤器查询 参数为(a)
+        //limitBy 过滤限制个数 参数为(2)
+        window.onload = function () {
+            new Vue({
+                el: "#box",
+                data: {
+                    msg: ['hello', 'world', 'vue', 'heha'],
+                    a: ""
+                },
+            });
+        }
+    </script>
+</head>
+<body>
+<div id="box">
+    <input type="text" v-model="a">
+    <ul>
+        <li v-for="var in msg | limitBy 2 |filterBy a">{{var}}</li>
+    </ul>
+</div>
+
+</body>
+</html>

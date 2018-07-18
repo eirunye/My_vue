@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v-组件-props</title>
+    <script src="js/vue.js"></script>
+    <script>
+        //1.自定义一个指令如 v-focus
+        //2.通过 Vue.directive('自定义的指令', {inserted: function (el) {el.focus();//调用方法}})
+        //3.创建new Vue({el:'',data:{;;}})
+        window.onload = function () {
+
+            new Vue({
+                el: '#box',
+                data: {},
+                directives: {
+                    //注册一个局部的自定义指令v-focus
+                    focus: {
+                        //指令定义
+                        inserted: function (el) {
+                            //聚焦元素
+                            el.focus()
+
+                        }
+                    }
+                }
+            })
+        }
+    </script>
+</head>
+<body>
+
+<div id="box">
+    <p>页面载入时，input 元素自动获取焦点：</p>
+    <input v-focus>
+</div>
+
+</body>
+</html>
