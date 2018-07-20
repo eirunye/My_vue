@@ -1,14 +1,22 @@
-# My_vue
-This is my note on learning vue
+# Vue 主要学习笔记1
 
-1、常见的标识
+> 1、This is my note on learning vue
 
-2、自定义指令
+    1、常见的标识
 
-3、计算属性
+    2、自定义指令
 
-4、数据请求交互
+    3、计算属性
 
-5、过滤器
+    4、数据请求交互
 
+    5、过滤器
+    
+ > 2、Continue to learn the course of vue
+ 
+    1、动画
+    
+    2、自定义组件
+    
+    3、。。。。。。
 
