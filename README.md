@@ -1,7 +1,7 @@
 # <div algin=center>Vue 主要学习笔记1</div> 
 
 <div algin=center>
-< img src="https://upload-images.jianshu.io/upload_images/3012005-30d9dd71838a87c4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/500">
+<img src="https://upload-images.jianshu.io/upload_images/3012005-30d9dd71838a87c4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/500">
  </div>   
 
 # Vue 基本使用
